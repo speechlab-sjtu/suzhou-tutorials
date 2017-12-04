@@ -12,7 +12,7 @@ chmod g+r $OLD_HOME -R
 
 # copy the sample .bashrc for group init scripts
 cp $GROUP_DIR/shared/scripts/sample.bashrc $OLD_HOME/.bashrc
-cp $GROUP_DIR/shared/scripts/sample.zshrc $OLDHOME/.zshrc
+cp $GROUP_DIR/shared/scripts/sample.zshrc $OLD_HOME/.zshrc
 
 # invoke privilliged scripts to create working dir and chown
 cd .utils/ && \
