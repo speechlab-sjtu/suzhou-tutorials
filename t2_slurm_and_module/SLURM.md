@@ -1,5 +1,21 @@
 # SLURM Tutorials 
+## 资源调度和申请
+### Gres
+SLURM 采用Generic Resource (GRES) 管理GPU. 为了提高资源利用率,苏州超算每一
+块卡对应2个GRES的资源.
 
+经过GRES的调度之后,`CUDA_VISIBLE_DEVICES`会自动设置,多卡任务不需要再对GPU进
+行选择,把任务分配到你能看到的所有GPU上即可.
+
+### 示例:
+```bash
+sbatch -p 4gpuq --gres=gpu:2 # 申请2块GPU,CUDA_VISIBLE_DEVICES=0,1
+sbatch -p 4gpuq --gres=gpu:1 # 申请1块GPU,CUDA_VISIBLE_DEVICES=0
+
+## 如果两个任务分别申请1个GPU资源
+sbatch -p 4gpuq --gres=gpu:1 # CUDA_VISIBLE_DEVICES=0
+sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0/1/2/3
+```
 ## 常用的命令
 
 ### 查看集群资源
