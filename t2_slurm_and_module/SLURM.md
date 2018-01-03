@@ -40,6 +40,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
      * `-J / --job-name <name>`
      * `-o / --output=<output_log>`
      * `-e / --error=<error_log>` # 如果不指定则都输出到output文件中
+     * `--mem=50G` 制定内存需求
 
 **scancel**: 取消提交的任务
 
