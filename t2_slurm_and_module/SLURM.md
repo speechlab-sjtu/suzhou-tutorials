@@ -39,9 +39,9 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
      * `--gres=<list>` : 请求 GPU 资源的选项, `--gres=gpu:2` 表示表示需要 2 块 GPU
      * `-J / --job-name <name>`
      * `-o / --output=<output_log>`
-     * `-e / --error=<error_log>` 如果不指定则都输出到output文件中
-     * `--mem=50G` 需要的内存大小(提示`memory out of limit`需要手动增大内存限制)
-       * `--mem-per-cpu=10G`
+     * `-e / --error=<error_log>` 如果不指定则都输出到output文件中
+     * `--mem=50G` 需要的内存大小(提示`memory out of limit`需要手动增大内存限制)
+        * `--mem-per-cpu=10G`
 
 **scancel**: 取消提交的任务
 
