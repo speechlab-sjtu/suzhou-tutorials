@@ -82,7 +82,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
      ```
      $ srun -p 3gpuq -w kunshan nvidia-smi
      ```
-     > 可 快速两次 <ctrl-c> 或者 一次 <ctrl-d> 结束此次 srun
+     > 可 快速两次 \<ctrl-c\> 或者 一次 \<ctrl-d\> 结束此次 srun
 
 ### <span id="sbatch"> **sbatch**: 提交任务脚本（后台批量提交式）</span>
 
@@ -134,7 +134,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
 > **sattach** [*options*] <jobid.stepid> 
 
  * sbatch 提交任务脚本之后，脚本在后台进入队列，自动运行。使用 `sattach` 可以将后台的任务的 I/O 显示到前台来，便于直接观察。
- * 可以 <ctrl-c> 退出 sattach，不会对任务有任何影响
+ * 可以 \<ctrl-c\> 退出 sattach，不会对任务有任何影响
 
     > p.s. 若没有 stepid ，可以使用 0。即 `sattach jobid.0`
 
