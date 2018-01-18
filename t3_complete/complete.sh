@@ -38,13 +38,14 @@ chmod g+x $WORK_DIR
 # 
 ###
 
-ESSENTIAL_FILES=(.bash_history .bash_profile .bashrc .cache .config .ssh .viminfo .Xauthority)
+ESSENTIAL_FILES=(.bash_history .bash_profile .bashrc .config .ssh .viminfo .Xauthority)
 cd $WORK_DIR
 
 # some files are simply a symbolic link to original home
 for file in ${ESSENTIAL_FILES[@]}; do
   rm $file -rf && ln -s $OLD_HOME/$file
 done
+ln -s ../../shared/data
 
 
 # set default user mode for pip
@@ -52,5 +53,5 @@ mkdir .pip
 cp $GROUP_DIR/shared/scripts/sample.pip.conf .pip/pip.conf
 
 # reload the bashrc
-source .bashrc
+source ~/.bashrc
 #TODO: remove redundant files in original home
