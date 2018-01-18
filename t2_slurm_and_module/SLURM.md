@@ -39,6 +39,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
 > **sinfo** [*OPTIONS...*]
 
 * 常用选项:
+
     | 选项 | 功能 |
     | -------- | -------- |
     | `sinfo -N`     | 按节点显示计算资源 |
@@ -52,6 +53,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
 > **squeue** [*OPTIONS...*]
 
 * 常用选项:
+
     | 选项 | 功能 |
     | -------- | -------- |
     | `squeue -j JOB_ID`     | 显示某个任务信息 |
@@ -87,6 +89,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
 > **sbatch** [ *OPTIONS(0)...* ] script(0) [*args(0)...*]
 
  * 常用选项:
+ 
     | 选项 | 功能 |
     | ------- | -------- |
     | `-p / --partition=<partition>` | 提交的队列 |
@@ -140,6 +143,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
 > **scancel** [*OPTIONS...*] [*job_id[_array_id][.step_id*]] [*job_id[_array_id][.step_id]...*]
 
  * 常用选项:
+ 
     | 选项 | 功能 |
     | ------- | -------- |
     | `scancel <job_id>` | 取消任务 via job_id |
@@ -151,6 +155,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
 > **sstat** [*options*]
 
  * 常用选项
+ 
     | 选项 | 功能 |
     | ------- | -------- |
     | `sstat -j <job(.step)>` | 任务的运行信息 |
@@ -169,6 +174,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
 > **scontrol** [*OPTIONS...*] [*COMMAND...*]
 
  * 常用选项:
+ 
     | 选项 | 功能 |
     | ------- | -------- |
     | `scontrol show job JOB_ID` | JOB_ID 的详细信息 |
@@ -180,6 +186,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
 > sacct [*OPTIONS...*]
  
  * 常用选项: 
+ 
     | 选项 | 功能 |
     | ------- | -------- |
     | `sacct -l` | 详细统计信息 |
