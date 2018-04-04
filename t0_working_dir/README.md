@@ -25,12 +25,12 @@ In this setup, we use the *working dir* as a **fake home**, thus the **real home
 
 ```
 |-- home
-|   `-- ky219
+|   `-- kk520
 |       |-- .bashrc
 |       `-- .ssh
 `-- work_dir
-    `-- ky219
-        |-- .bashrc -> home/ky219/.bashrc
+    `-- ky520
+        |-- .bashrc -> home/ky219/.bashrc
         `-- .ssh -> home/ky219/.ssh
 ```
 
