@@ -96,6 +96,7 @@ sbatch -p 4gpuq --gres=gpu:1 # 可能申请到同一块卡CUDA_VISIBLE_DEVICES=0
     | `-w / --nodelist=<cherry,...>` | 指定提交节点 |
     | `-n / --ntasks=<number>` |  需要的 核心（process） 数 | 
     | `--gres=<list>` | 请求 GPU 资源的选项, `--gres=gpu:2` 表示表示需要 2 块 GPU |
+    | `--mem=<number>[K/M/G] | 请求 内存 资源的选项，`--mem=20G` 表示需要 20G 的内存资源 |
     | `-J / --job-name=<name>` | 设置任务的名称 |
     | `-o / --output=<output_log>` | 标准输出 standard output |
     | `-e / --error=<error_log>` | 标准错误输出 standard error  |
